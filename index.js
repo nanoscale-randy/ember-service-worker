@@ -86,7 +86,7 @@ module.exports = {
     if (type === 'body-footer' && config.environment !== 'test') {
       var rootURL = this._getRootURL();
 
-      return '<script src="' + rootURL + 'sw-registration.js"></script>';
+      return '<script src="sw-registration.js"></script>';
     }
   },
 
