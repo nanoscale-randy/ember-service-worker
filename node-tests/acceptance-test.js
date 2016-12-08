@@ -31,7 +31,7 @@ describe('Acceptance Tests', function() {
 
     it('produces a sw-registration file, which is loaded in index.html', function() {
       exists(dist('sw-registration.js'));
-      contains(dist('index.html'), '<script src="/sw-registration.js"></script>');
+      contains(dist('index.html'), '<script src="sw-registration.js"></script>');
     });
 
     it('transpiles and concatenates (rollup) all files in a plugin into sw.js', function() {
