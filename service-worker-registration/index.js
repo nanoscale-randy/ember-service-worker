@@ -4,8 +4,7 @@ let SUCCESS_HANDLERS = [];
 let ERROR_HANDLERS = [];
 
 if ('serviceWorker' in navigator) {
-  //navigator.serviceWorker.register('{{ROOT_URL}}sw.js', { scope: '{{ROOT_URL}}' })
-  navigator.serviceWorker.register('sw.js', { scope: '/' })
+  navigator.serviceWorker.register('{{ROOT_URL}}sw.js', { scope: '{{ROOT_URL}}' })
     .then(function(reg) {
       let current = Promise.resolve();
 
