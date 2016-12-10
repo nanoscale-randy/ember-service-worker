@@ -11,7 +11,7 @@ if ('serviceWorker' in navigator) {
 
   rootUrl = config.ui_base_path || '{{ROOT_URL}}';
 
-  navigator.serviceWorker.register('sw.js', { scope: rootUrl })
+  navigator.serviceWorker.register(rootUrl + 'sw.js', { scope: rootUrl })
     .then(function(reg) {
       let current = Promise.resolve();
 
