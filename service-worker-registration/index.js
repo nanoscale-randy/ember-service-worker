@@ -9,7 +9,7 @@ if ('serviceWorker' in navigator) {
     config = JSON.parse(decodeURIComponent(document.querySelectorAll('meta[name*="/config/environment"]')[0].content));
   } catch (e) {}
 
-  rootUrl = config.ui_base_path || '{{ROOT_URL}}';
+  let rootUrl = config.ui_base_path || '{{ROOT_URL}}';
 
   navigator.serviceWorker.register(rootUrl + 'sw.js', { scope: rootUrl })
     .then(function(reg) {
