@@ -4,7 +4,7 @@ let SUCCESS_HANDLERS = [];
 let ERROR_HANDLERS = [];
 
 if ('serviceWorker' in navigator) {
-  config = {};
+  let config = {};
   try {
     config = JSON.parse(decodeURIComponent(document.querySelectorAll('meta[name*="/config/environment"]')[0].content));
   } catch (e) {}
