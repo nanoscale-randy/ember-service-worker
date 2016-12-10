@@ -127,7 +127,7 @@ module.exports = {
     }
 
     var config = this.project.config();
-    var rootURL = config.ui_base_path || config.rootURL || config.baseURL || '/';
+    var rootURL = config.rootURL || config.baseURL || '/';
 
     return this._projectRootURL = rootURL;
   },
