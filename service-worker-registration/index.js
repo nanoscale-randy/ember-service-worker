@@ -10,6 +10,12 @@ if ('serviceWorker' in navigator) {
   } catch (e) {}
 
   let rootUrl = config.ui_base_path || '{{ROOT_URL}}';
+  if (rootUrl && !rootUrl.startsWith('/')) {
+    rootUrl = '/' + rootUrl
+  }
+  if (rootUrl && !rootUrl.endsWith('/')) {
+    rootUrl = rootUrl + '/'
+  }
 
   navigator.serviceWorker.register(rootUrl + 'sw.js', { scope: rootUrl })
     .then(function(reg) {
